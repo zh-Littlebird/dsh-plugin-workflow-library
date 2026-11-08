@@ -48,4 +48,6 @@ node test/workflow.test.mjs
 node test/store.test.mjs
 ```
 
-安装：在 Harness 里用 `plugin_manager` 的 `install_bundle`，`target` 指向本目录。
+安装：`dsh plugin --profile desktop add dsh-plugin-workflow-library`，或用 `plugin_manager` 的 `install_bundle`（`target` 传包名或克隆下来的目录）。
+
+许可证：MIT。
