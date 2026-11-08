@@ -1,0 +1,9 @@
+- insert:
+    - id: workflow-library
+      name: dsh-plugin-workflow-library
+      config:
+        root: ''
+        registerSkills: true
+        autoIndex: true
+        onConflict: suffix
+        language: auto

@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Workflow library",
+    "description": "Turn repeatable tasks into reusable skills: the model loads steps, inputs, and acceptance checks on demand."
+  }
+}

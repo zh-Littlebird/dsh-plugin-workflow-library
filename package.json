@@ -1,0 +1,71 @@
+{
+  "name": "dsh-plugin-workflow-library",
+  "version": "0.1.0",
+  "description": "工作流库：对模型说一句「把这个流程固化一下」，把重复任务沉淀成可复用技能；新会话自动发现，按需加载。",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "workflow.js",
+    "store.js",
+    "provider.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    }
+  },
+  "engines": {
+    "node": ">=22.19.0",
+    "dsh": ">=0.2.1-rc.2 <0.3.0"
+  },
+  "dependencies": {
+    "@deepseek-ai/schemastery": "3.18.5"
+  },
+  "scripts": {
+    "test": "node test/workflow.test.mjs && node test/store.test.mjs && node test/provider.test.mjs"
+  },
+  "license": "MIT",
+  "author": "Hu Zhang (https://github.com/zh-Littlebird)",
+  "homepage": "https://github.com/zh-Littlebird/dsh-plugin-workflow-library#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zh-Littlebird/dsh-plugin-workflow-library.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zh-Littlebird/dsh-plugin-workflow-library/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "workflow",
+    "skills",
+    "automation"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": ">=4.0.0 <5.0.0"
+  }
+}
